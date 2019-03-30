@@ -3,6 +3,5 @@ function f3 (string, obj) {
 		return obj;
 	} else {
 		obj[string] = "new";
-		return obj;
-	}
+	} return obj;
 };
