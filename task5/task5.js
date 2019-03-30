@@ -1,3 +1,4 @@
+//Я пока не нашла правильного решения задачи, но это тоже работает.
 var currentValue = 0;
 var Calculator = function () {
 	this.add = function (a) {
