@@ -4,6 +4,5 @@ function every (array, callback) {
 		if(!(callback(item, i, array))) {
 			return false;
 		} 
-		
-        } return true;
+	  } return true;
 }
