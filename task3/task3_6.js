@@ -1,4 +1,11 @@
 function makeDeepClone (obj) {
-	 var copy = JSON.parse(JSON.stringify(obj) );
-	 return copy;
+	var clone = {};
+	for (var key in obj) {
+		if (typeof obj[key] == "object") {
+			clone[key] = makeDeepClone(obj[key]);
+		} else {
+			  clone[key] = obj[key];
+		}
+	}
+	return clone;
 };

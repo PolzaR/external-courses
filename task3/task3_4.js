@@ -1,7 +1,7 @@
 function f3 (string, obj) {
-	if (string in obj) {
-		return obj;
-	} else {
+	if (!obj[string]) {
 		obj[string] = "new";
-	} return obj;
+	}
+	
+	return obj;
 };

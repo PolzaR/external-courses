@@ -1,6 +1,5 @@
-var clone;
 function f4 (object) {
-	clone = {};
+	var clone = {};
 	for (var key in object) {
 	  clone[key] = object[key];
 	}
