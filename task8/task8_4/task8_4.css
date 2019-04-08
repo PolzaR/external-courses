@@ -1,0 +1,24 @@
+* {
+	margin: 0px;
+}
+
+div {
+	text-indent: 20px;
+	text-align: center;
+	padding: 10px;
+	margin: 10px;
+}
+
+#second {
+	width: 80%;
+	background: #ccdcff;
+	word-spacing: 0.35em;
+	text-transform: uppercase;
+}
+
+
+#fourth {
+	background: rgb(230, 243, 255);
+	width: 400px;
+	font: 0.9em "Comic Sans MS";
+}
