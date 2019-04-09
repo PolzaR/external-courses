@@ -3,8 +3,7 @@ function some (array, callback) {
 		var item = array[i];
 		if(callback(item, i, array)) {
 			return true;
-		} else {
-		return false
-        }
+		};
 	}
+	return false;
 }
