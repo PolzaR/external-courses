@@ -3,10 +3,10 @@ function sliceAnalogy (array, begin, end) {
 
 	if ((typeof begin === "undefined") && (typeof end === "undefined")) {
 		result = array;
-    };
+    	};
 	if (typeof begin === "undefined") {
 		begin = 0;
-    };
+    	};
 	if (typeof end === "undefined") {
 		end = array.length;
 	};
@@ -16,9 +16,9 @@ function sliceAnalogy (array, begin, end) {
 	if (end < 0) {
 		end = array.length + end;
 	};
-    for (var i = begin; i < end; i++) {
-			result[i] = array[i]
-		}
+    	for (var i = begin; i < end; i++) {
+		result[i] = array[i]
+	}
 		
-    return result;
+   	return result;
 }
