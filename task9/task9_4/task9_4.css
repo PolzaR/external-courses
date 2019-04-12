@@ -1,0 +1,84 @@
+.first_method {
+    margin-bottom: 50px;
+}
+
+.first_method .one {
+    position: relative;
+    z-index: 2;
+
+    width: 300px;
+    height: 200px;
+
+    background: #00b377;
+}
+
+.first_method .two {
+    position: absolute;
+    z-index: 1;
+    top: 15px;
+    left: 15px;
+
+    width: 300px;
+    height: 200px;
+
+    background: #0c8;
+
+    filter: blur(1px);
+}
+
+.first_method .three {
+    position: absolute;
+    z-index: 0;
+    top: 20px;
+    left: 20px;
+
+    width: 300px;
+    height: 200px;
+
+    background: #00e699;
+
+    filter: blur(1px);
+}
+
+.second_method {
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+
+    background: #00b377;
+    box-shadow: 5px 5px 1px #0c8,
+    10px 10px 1px #00e699;
+}
+
+.third_method {
+    position: relative;
+
+    width: 300px;
+    height: 200px;
+    margin: 50px 10px 30px;
+
+    background: #00b377;
+}
+div.third_method::after,
+div.third_method::before {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    content: '';
+}
+div.third_method::after {
+    top: 5px;
+    left: 5px;
+
+    opacity: .7;
+    background: #00b377;
+}
+div.third_method::before {
+    top: 10px;
+    left: 10px;
+
+    opacity: .5;
+    background: #00b377;
+}
