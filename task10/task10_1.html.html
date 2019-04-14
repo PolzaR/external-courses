@@ -55,7 +55,7 @@
 			Email <input type="email" name="email"><br>
 			Phone <input type="tel" name="phone"><br>
 		</fieldset>
-		Password <input type="password" name="password" required><br>
+		Password<span style="color: red">&#9913;</span> <input type="password" name="password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*" title="Минимум 8 символов, одна цифра, одна буква в верхнем регистре и одна в нижнем" required><br>
 		<input type="submit" value="Отправить"><input type="reset" name="reset" >
 	</form>
 
