@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Forms</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		input {
+			margin: 5px; 
+		}
+		fieldset {
+			width: 50%;
+			
+		}
+	</style>
+</head>
+<body>
+	<form action="http://httpbin.org/post" method="post" autocomplete="on">
+	<!--<form action="http://httpbin.org/get" method="get">-->	
+		<fieldset>
+			<legend>Personal Data</legend>
+			Surname <input type="text" name="surname" autocomplete="on" autofocus><br>
+			First name <input type="text" name="firstName" autocomplete="on"><br>
+			Middle name <input type="text" name="middleName" autocomplete="on"><br>
+			You are <input type="radio" name="sex" value="1" autocomplete="on">male<input type="radio" name="sex" value="2" autocomplete="on">female<br>
+			Age <input type="number" min="18" max="101" name="age" autocomplete="on"><br>
+			Country of Residence <select size="1" name="country[]">
+				<option selected disabled></option>
+				<option value="ast">Australia</option>
+				<option value="blg">Belgium</option>
+				<option value="ger">Germany</option>
+				<option value="itl">Italy</option>
+				<option value="rus">Russia</option>
+			</select><br>
+			City <input type="checkbox" name="city">Ryazan<input type="checkbox" name="city">Moscow<br>
+			Photography <input type="file" name="photo" accept="image/*" novalidate multiple><br>
+			<hr>
+			Title <select size="8" name="title">
+				<optgroup label="Technologies">
+					<option>Web Master</option>
+					<option>Database Administrator</option>
+					<option>Computer-aided design</option>
+				</optgroup>
+				<optgroup label="Finance">
+					<option>Economic Planning</option>
+					<option>Management accounting</option>
+					<option>Budgeting and planning</option>
+				</optgroup>
+			</select><br>
+			Salary <input type="range" name="salary" min="0" max="1000000" step="1000"><br>
+			<textarea name="comment" cols="50" rows="10" placeholder="Tell us about yourself..."></textarea><br>
+		</fieldset>
+		<fieldset>
+			<legend>Contact Information</legend>
+			Site <input type="url" name="site"><br>
+			Email <input type="email" name="email"><br>
+			Phone <input type="tel" name="phone"><br>
+		</fieldset>
+		Password <input type="password" name="password" required><br>
+		<input type="submit" value="Отправить"><input type="reset" name="reset" >
+	</form>
+
+</body>
+</html>
