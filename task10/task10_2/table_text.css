@@ -1,0 +1,12 @@
+td:first-child {
+	text-transform: capitalize;
+}
+th {
+	text-transform: uppercase;
+}
+td, th {
+	color: #595959;
+}
+td {
+	font: caption;
+}
