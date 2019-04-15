@@ -1,0 +1,15 @@
+td {
+	padding: 12px;
+}
+th {
+	padding: 5px 10px;
+}
+tr:nth-child(2n) {
+	background: #e6f2ff;
+}
+tr:nth-child(2n+1) {
+	background: #cce5ff;
+}
+tr:hover:not(#table_head) {
+	background: #ccccff; 
+}
