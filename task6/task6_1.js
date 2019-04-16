@@ -1,9 +1,6 @@
 function sliceAnalogy (array, begin, end) {
 	var result = [];
 
-	if ((typeof begin === "undefined") && (typeof end === "undefined")) {
-		result = array;
-    	};
 	if (typeof begin === "undefined") {
 		begin = 0;
     	};
@@ -17,7 +14,7 @@ function sliceAnalogy (array, begin, end) {
 		end = array.length + end;
 	};
     	for (var i = begin; i < end; i++) {
-		result[i] = array[i]
+		result[i-begin] = array[i]
 	}
 		
    	return result;
