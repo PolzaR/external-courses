@@ -23,7 +23,7 @@
 
     background: #0c8;
 
-    filter: blur(1px);
+    filter: blur(0.4px);
 }
 
 .first_method .three {
@@ -37,7 +37,7 @@
 
     background: #00e699;
 
-    filter: blur(1px);
+    filter: blur(0.4px);
 }
 
 .second_method {
