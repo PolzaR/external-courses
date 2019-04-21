@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task 1</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		img {
+			width: 300px;
+			height: 300px;
+			border-radius: 50%;
+			animation-name: form;
+			animation-duration: 3s;
+			animation-timing-function: linear;
+			animation-fill-mode: forwards;
+		}
+		/*#main {
+			-webkit-mask-image: url(phf.png);
+			-webkit-mask-size: 300px;
+		}*/
+		@keyframes form {
+			0% {
+				border-radius: 50%;
+			}
+			100% {
+				-webkit-mask-image: url(cowboy.png);
+				-webkit-mask-size: 300px;
+			}
+			/*100% {
+				-webkit-clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+				clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+			}*/
+		}
+
+	</style>
+</head>
+<body>
+	<img id="main" src="grunge-metal.jpg">
+</body>
+</html>
