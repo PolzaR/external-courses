@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animation</title>
+	<meta charset="utf-8">
+	<style>
+		#text {
+			text-transform: capitalize;
+			text-align: center;
+		}
+		#first {
+			height: 40px;
+			width: 400px;
+			border: 3px solid rgb(204, 220, 255);
+			margin: 10px auto;
+			position: relative;
+			overflow: hidden;
+			animation-name: wrapper;
+			animation-duration: 10s;
+			animation-timing-function: linear;
+			animation-iteration-count: infinite;
+		}
+		#load {
+			background: repeating-linear-gradient(35deg, rgba(204, 204, 204,.9) 0, rgba(179, 204, 255,.9) 5px, transparent 5px, transparent 10px);
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			left: -400px;
+			animation-name: load;
+			animation-duration: 10s;
+			animation-timing-function: linear;
+			animation-iteration-count: infinite;
+		}
+		@keyframes load {
+			0% {
+				left: -400px;
+
+			}
+			100% {
+				left: 0px;
+			}
+		}
+		@keyframes wrapper {
+			0% {
+				transform: rotateX(0deg);
+
+			}
+			100% {
+				transform: rotateX(720deg);
+			}
+		}
+	</style>
+</head>
+<body>
+	<h2 id="text">loading</h2>
+	<div id="first">
+		<div id="load"></div>
+	</div>
+</body>
+</html>
