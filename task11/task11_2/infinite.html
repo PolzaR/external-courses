@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Infinite Animation</title>
+	<meta charset="utf-8">
+	<style>
+		.anim {
+			width: 200px;
+			height: 200px;
+			border: 1px solid black;
+			border-radius: 50%;
+			background-color: white;
+			margin: 200px auto;
+			animation: differ 12s linear infinite; 
+		}
+		@keyframes differ{
+			0% {
+				background: white; border-radius: 50%; transform: scale(1) skew(0) rotate(0); /*initial*/
+			}
+			15% {
+				background: radial-gradient(white, rgb(214, 112, 112)); border-radius: 50%; transform: scale(1) skew(0) rotate(0); /*circle and gradient*/
+			}
+			30% {
+				background: radial-gradient(white, rgb(214, 112, 112)); border-radius: 0%; transform: scale(1) skew(0) rotate(0); /*square*/
+			}
+			45% {
+				background: radial-gradient(at bottom, rgb(212, 149, 149), rgb(175, 2, 2)); border-radius: 0%; transform: scale(1) skew(0) rotate(0); /*change gradient*/
+			}
+			60% {
+				background: radial-gradient(at bottom, rgb(212, 149, 149), rgb(175, 2, 2)); border-radius: 0%; transform: scale(1, -1) skew(-45deg, 20deg) rotate(0); /*size and distortion*/
+			}
+			75% {
+				background: radial-gradient(at bottom, rgb(212, 149, 149), rgb(175, 2, 2)); border-radius: 0%; transform: scale(1) skew(0) rotate(180deg); /*rotate*/
+			}
+			90% {
+				background: radial-gradient(circle farthest-corner at 100px 50px, rgb(235, 7, 7), rgb(10, 10, 10)); border-radius: 0%; transform: scale(1) skew(0) rotate(0); /*change gradient*/
+			}
+			100% {
+				background: radial-gradient(circle farthest-corner at 100px 50px, rgb(235, 7, 7), rgb(10, 10, 10)); border-radius: 50%; transform: scale(1) skew(0) rotate(0);/*cicrle*/
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="anim">
+	</div>
+</body>
+</html>
