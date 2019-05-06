@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="list">
+        <li>11 item</li>
+        <li>12 item</li>
+    </ul>
+    <button id="add">Prepend</button>
+    <script>
+        var prepend = function(container, element) {
+            var count = 10;
+                return function () {
+                    if (count > 0) {
+                        var contain = document.getElementById(container);
+                        var elem = document.createElement(element);
+                        elem.innerHTML = count + " element";
+                        contain.insertBefore(elem, contain.firstChild);
+                        count--;
+                    }
+                } 
+        };
+        var buttonEvent = prepend('list', 'li');
+        add.addEventListener("click", buttonEvent);
+    </script>
+</body>
+</html>
