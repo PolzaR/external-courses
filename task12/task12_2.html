@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+        header {
+            display: flex;
+            justify-content: flex-end;
+            background-color: #262626;
+        }
+        button {
+            margin: 20px;
+            width: 150px;
+            height: 40px;
+        }
+        ul {
+            padding: 20px;
+            display: none;
+        }
+        li {
+            list-style-type: none;
+            line-height: 30px;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div id="user">
+            <button id="dropDown">User Name</button>
+            <ul id="dropDownMenu">
+                <li><a href="#">John Doe</a></li>
+                <li><a href="#">john.doe@gmail.com</a></li>
+                <li><a href="#">Sign In</a></li>
+            </ul>
+        </div>
+    </header>
+    <script>
+        var menu = document.getElementById('dropDownMenu');
+        var buttonEvent = document.getElementById('dropDown');
+        var showMenu = function() {
+            menu.style.display = 'block';
+        };
+        var fadeMenu = function(event) {
+            if (event.target != buttonEvent) {
+                menu.style.display = 'none';
+            }
+        };
+     
+        dropDown.addEventListener('click', showMenu);
+        document.addEventListener('click', fadeMenu);
+    </script>
+</body>
+</html>
