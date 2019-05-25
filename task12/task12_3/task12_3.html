@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Star Rating</title>
+    <meta charset="utf-8">
+    <style>
+        .rating {
+            display: none;
+            font-size: 20px;
+            font-weight: bold;
+            color: gold;
+        }
+
+        .rating .star {
+            display: inline-block;
+            position: relative;
+        }
+
+        .rating .star::before {
+            display: inline-block;
+            color: gold;
+            content: '☆';
+            font-size: 2em;
+            width: 1em;
+            height: 1em;
+        }
+
+        .rating .star::after {
+            display: inline-block;
+            position: absolute;
+            content: '★';
+            top: 0;
+            left: 0;
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .star:hover::after,
+        .rating .star.active::after {
+            opacity: 1;
+            font-size: 2em;
+            width: 1em;
+            height: 1em; 
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span class="rating"></span>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        var ratings = document.querySelector('.rating');
+        var new_el = new StarRating(ratings);
+
+        ratings.addEventListener('rate', function(e) {
+            console.log('rating: ' + e.detail);
+        });
+    </script>
+</body>
+</html>
