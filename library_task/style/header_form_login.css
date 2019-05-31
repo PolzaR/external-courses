@@ -1,0 +1,17 @@
+.header-form-log-in {
+    position: absolute;
+    top: 45px;
+
+    display: none;
+
+    margin-left: -10px;
+
+    border: 2px solid #78829d;
+    background-color: #2f364a;
+}
+.header-form-button-submit {
+    margin: 0 32%;
+}
+.header-form-log-in input {
+    padding-top: 5px;
+}
