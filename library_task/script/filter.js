@@ -7,6 +7,8 @@ var must_read_filter = function() {
 	
 	wrapper.innerHTML = "";
 	makeNewBook(result);
+
+	makeHistory("You watched category 'MUST READ' ", new Date());
 }
 
 li_must_read.addEventListener('click', must_read_filter);
@@ -20,6 +22,8 @@ var best_filter = function() {
 	
 	wrapper.innerHTML = "";
 	makeNewBook(result);
+
+	makeHistory("You watched category 'BEST OF LIST' ", new Date());
 }
 
 li_best.addEventListener('click', best_filter);
@@ -33,6 +37,8 @@ var classic_filter = function() {
 	
 	wrapper.innerHTML = "";
 	makeNewBook(result);
+
+	makeHistory("You watched category 'CLASSIC NOVELS' ", new Date());
 }
 
 li_classic.addEventListener('click', classic_filter);
@@ -46,6 +52,8 @@ var non_fiction_filter = function() {
 	
 	wrapper.innerHTML = "";
 	makeNewBook(result);
+
+	makeHistory("You watched category 'NON FICTION' ", new Date());
 }
 
 li_non_fiction.addEventListener('click', non_fiction_filter);
