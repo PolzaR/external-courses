@@ -29,6 +29,10 @@ const search = debounce(function(e) {
 				book.style.display = 'none';
 			}
 		})
+		var historyText = "You searched for ' " + e.target.value + "'";
+		makeHistory(historyText, new Date());
 }, 300);
 
 searchInput.addEventListener('keyup', search);
+
+
