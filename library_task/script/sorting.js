@@ -1,4 +1,7 @@
+////SORTING///
+
 var wrapper = document.querySelector('article');
+
 
 ///all books///
 
@@ -9,6 +12,8 @@ var all_books_sort = function () {
 	});
 	wrapper.innerHTML = "";
 	makeNewBook(books);
+
+	makeHistory("You sorted by category 'All Books' ", new Date());
 }
 li_all_books.addEventListener('click', all_books_sort);
 
@@ -22,6 +27,8 @@ var li_popular = document.getElementById('popular');
 	});
 		wrapper.innerHTML = "";
 		makeNewBook(books);
+
+		makeHistory("You sorted by category 'Popular' ", new Date());
 	}
 	li_popular.addEventListener('click', rating_sort);
 
@@ -34,6 +41,8 @@ var update_sort = function () {
 	});
 		wrapper.innerHTML = "";
 		makeNewBook(books);
+
+		makeHistory("You sorted by category 'Recent' ", new Date());
 	}
 li_recent.addEventListener('click', update_sort);
 
@@ -46,6 +55,8 @@ var free_books_sort = function () {
 			});
 		wrapper.innerHTML = "";
 		makeNewBook(result);
+
+		makeHistory("You sorted by category 'Free Books' ", new Date());
 	};
 	
 li_free_books.addEventListener('click', free_books_sort);
