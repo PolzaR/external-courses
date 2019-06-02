@@ -18,16 +18,28 @@
             height: 40px;
         }
         ul {
-            padding: 20px;
+            text-align: center;
             display: none;
+            padding-inline-start: 0;
         }
         li {
+            padding: 5px;
             list-style-type: none;
+            list-style-position: inside;
             line-height: 30px;
-        }
-        a {
-            text-decoration: none;
             color: white;
+            cursor: pointer;
+
+        }
+        li:hover {
+            background-color: #666666;
+        }
+        #dropDownMenu {
+            position: absolute;
+            top: 70px;
+            right: 15px;
+            border: 2px solid silver;
+            background-color: #262626;
         }
 
     </style>
@@ -37,9 +49,9 @@
         <div id="user">
             <button id="dropDown">User Name</button>
             <ul id="dropDownMenu">
-                <li><a href="#">John Doe</a></li>
-                <li><a href="#">john.doe@gmail.com</a></li>
-                <li><a href="#">Sign In</a></li>
+                <li>John Doe</li>
+                <li>john.doe@gmail.com</li>
+                <li>Sign In</li>
             </ul>
         </div>
     </header>
