@@ -55,6 +55,10 @@ function addBook () {
     };
 	books.push(newObj);
 	wrapper.innerHTML = "";
+
+  var historyText = "You added a new book " + "'" + newObj.title + "'";
+  makeHistory(historyText, new Date());
+
 	return makeNewBook(books);
 };
 
