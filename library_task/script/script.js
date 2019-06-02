@@ -2,26 +2,23 @@
 ///
 // 1. одновременная работа фильтра и поиска
 // 2. рейтинг
-// 3. работа с историей
-// 4. ООП (классы) 
-// 5. утилиты
-// 6. mvc
-// 7. localStorage
-
-function getJSON () {
-			var requestURL = 'https://rsu-library-api.herokuapp.com/books';
+// 3. ООП (классы) 
+// 4. mvc
+// 5. localStorage
+var httpRequest = function httpRequest (method, url) {
+			var requestURL = url;
 			var request = new XMLHttpRequest();
-			request.open('GET', requestURL, false);
+			request.open(method, requestURL, false);
 			request.send();
 			if (request.status != 200) {
 			    console.log(request.status + ': ' + request.statusText);
 			} else {
-			  	var booksText = request.responseText;
-				return JSON.parse(booksText);
+			  	var content = request.responseText;
+				return JSON.parse(content);
 			}
-		}
+}
 
-var books = getJSON();
+var books = httpRequest('GET', 'https://rsu-library-api.herokuapp.com/books');
 
 window.onload = function () {
     makeNewBook(books);
@@ -44,8 +41,14 @@ function makeNewBook (array) {
 			bookItem.appendChild(bookItem_p2);
 			var rating_div = document.createElement('div');
 			var rating_span = document.createElement('span');
+
 			rating_span.className = "rating";
 			bookItem.appendChild(rating_div);
 			rating_div.appendChild(rating_span);
+			for(let i = 0; i < 5; i++) {
+				var rating_span_star = document.createElement('span');
+				rating_span_star.className = "star fa fa-star-o";
+				rating_span.appendChild(rating_span_star);
+			}
 		}
 	}
