@@ -1,5 +1,3 @@
-////SORTING///
-
 var wrapper = document.querySelector('article');
 
 
